@@ -1,6 +1,6 @@
-# Studio Web
+# Plume
 
-A lightweight, browser-based raster image editor. It runs as a static website with no account, backend, or build step. Editing happens locally in the browser; imported files are not uploaded.
+Plume is a lightweight, browser-based raster image editor. It runs as a static website with no account, backend, or build step. Editing happens locally in the browser; imported files are not uploaded.
 
 ## Run locally
 
@@ -10,7 +10,7 @@ Open a terminal in this folder and start any static HTTP server, for example:
 python -m http.server 8080
 ```
 
-Then open http://localhost:8080. This uses Python’s built-in HTTP server and needs no package installation. Serving over HTTP is recommended because browsers restrict JavaScript modules opened directly from `file://` URLs.
+Then open http://localhost:8080/ to view the landing page or http://localhost:8080/editor/ to open the editor. This uses Python’s built-in HTTP server and needs no package installation. Serving over HTTP is recommended because browsers restrict JavaScript modules opened directly from `file://` URLs.
 
 ## Host it
 
@@ -41,3 +41,5 @@ PSD/PSB import is a raster editing workflow. Photoshop text, vectors, smart obje
 PNG is the flattened export format. `.studio` is the editor’s editable project format and preserves its own text/shape metadata and reversible adjustment values. Canvas files and many layers use substantial browser memory; large PSB files can exceed browser memory limits even when their pixel dimensions fit the editor.
 
 The editor also lacks smart objects, vector paths, groups, advanced selection tools, color management, plug-ins, and the full adjustment and compositing pipelines of mature editors.
+
+
