@@ -26,9 +26,9 @@ Upload this folder to any static web host (GitHub Pages, Cloudflare Pages, Netli
 - Save and reopen `.studio` projects with layer pixels, masks, reversible adjustment values, and editable text/shape metadata
 - Browser-local autosave with a restore prompt after reopening; autosave is stored in IndexedDB on this device
 - Bounded undo/redo history to reduce retained memory on large layered documents
-- Flattened PNG export, undo/redo, zoom, keyboard shortcuts, and responsive interface
+- Flattened PNG, JPEG, and WebP export with quality control, undo/redo, zoom, keyboard shortcuts, and responsive interface
 
-Keyboard shortcuts: **V** move, **B** brush, **E** eraser, **L** line, **U** rectangle, **T** text, **G** fill, **C** crop, **I** eyedropper, **M** marquee, **D** gradient, **Ctrl/Cmd+Z** undo, **Ctrl/Cmd+Shift+Z** redo, **Ctrl/Cmd+S** save `.studio`, and **Ctrl/Cmd+Shift+S** export PNG. Press **Esc** to clear the marquee selection.
+Keyboard shortcuts: **V** move, **B** brush, **E** eraser, **L** line, **U** rectangle, **T** text, **G** fill, **C** crop, **I** eyedropper, **M** marquee, **D** gradient, **Ctrl/Cmd+Z** undo, **Ctrl/Cmd+Shift+Z** redo, **Ctrl/Cmd+S** save `.studio`, and **Ctrl/Cmd+Shift+S** export image. Press **Esc** to clear the marquee selection.
 
 ## PSD/PSB compatibility
 
@@ -38,7 +38,7 @@ PSD/PSB import is a raster editing workflow. Photoshop text, vectors, smart obje
 
 ## Other formats and limits
 
-PNG is the flattened export format. `.studio` is the editor’s editable project format and preserves its own text/shape metadata and reversible adjustment values. Canvas files and many layers use substantial browser memory; large PSB files can exceed browser memory limits even when their pixel dimensions fit the editor.
+PNG, JPEG, and WebP are flattened export formats. JPEG composites transparent pixels over white; JPEG and WebP offer an export quality control. `.studio` is the editor’s editable project format and preserves its own text/shape metadata and reversible adjustment values. Canvas files and many layers use substantial browser memory; large PSB files can exceed browser memory limits even when their pixel dimensions fit the editor.
 
 The editor also lacks smart objects, vector paths, groups, advanced selection tools, color management, plug-ins, and the full adjustment and compositing pipelines of mature editors.
 
