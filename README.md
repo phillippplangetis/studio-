@@ -19,7 +19,7 @@ Upload this folder to any static web host (GitHub Pages, Cloudflare Pages, Netli
 ## Features
 
 - Independent layers with visibility, opacity, blend modes, editable layer masks, rename, reorder, duplicate, add, and delete
-- Brush, eraser, move, line, rectangle, ellipse, text, flood fill, crop, rectangular marquee selection, gradient, blur brush, and eyedropper tools
+- Brush, eraser, move, line, rectangle, ellipse, text, flood fill, crop, rectangular and elliptical marquee, freehand lasso, and polygon selections with invert and feather controls; clone stamp, soft healing brush, gradient, blur brush, and eyedropper tools
 - Editable text and geometric shape layers, image import as a layer, canvas resizing, rotation, horizontal and vertical flip
 - Reversible per-layer brightness, contrast, saturation, grayscale, sepia, invert, and blur adjustments; sharpen and posterize filters
 - Open layered PSD/PSB files, import raster layers and pixel masks, and export layered 8-bit RGB PSD or PSB documents
