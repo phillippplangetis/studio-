@@ -19,7 +19,7 @@ Upload this folder to any static web host (GitHub Pages, Cloudflare Pages, Netli
 ## Features
 
 - Independent layers with visibility, opacity, blend modes, editable layer masks, rename, reorder, duplicate, add, and delete
-- Brush, eraser, move, line, rectangle, ellipse, text, flood fill, crop, rectangular and elliptical marquee, freehand lasso, and polygon selections with invert and feather controls; clone stamp, softened clone-based healing brush, gradient, blur brush, and eyedropper tools
+- Brush, eraser, move, line, rectangle, ellipse, text, flood fill, crop, rectangular and elliptical marquee, freehand lasso, and polygon selections with invert and feather controls; clone stamp and color-matched healing brush, gradient, blur brush, and eyedropper tools
 - Editable text and geometric shape layers, image import as a layer, canvas resizing, rotation, horizontal and vertical flip
 - Reversible per-layer brightness, contrast, saturation, grayscale, sepia, invert, and blur adjustments; sharpen and posterize filters
 - Open layered PSD/PSB files, import raster layers and pixel masks, and export layered 8-bit RGB PSD or PSB documents
@@ -40,6 +40,6 @@ PSD/PSB import is a raster editing workflow. Photoshop text, vectors, smart obje
 
 PNG, JPEG, and WebP are flattened export formats. JPEG composites transparent pixels over white; JPEG and WebP offer an export quality control. `.studio` is the editor’s editable project format and preserves its own text/shape metadata and reversible adjustment values. Canvas files and many layers use substantial browser memory; large PSB files can exceed browser memory limits even when their pixel dimensions fit the editor.
 
-The editor also lacks smart objects, vector paths, groups, advanced selection tools, color management, plug-ins, and the full adjustment and compositing pipelines of mature editors.
+Healing samples visible layers on documents up to 4 megapixels, matches the patch toward the destination’s local color, and softens its edge. Larger documents sample only the active layer to limit memory use. It is not content-aware and cannot synthesize missing detail. The editor also lacks smart objects, vector paths, groups, advanced selection tools, color management, plug-ins, and the full adjustment and compositing pipelines of mature editors.
 
 
