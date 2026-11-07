@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <meta name="description" content="How Plume processes images locally, stores browser autosaves, handles hosting logs, and approaches analytics.">
+  <link rel="canonical" href="https://plume.build/privacy.html">
+  <link rel="icon" type="image/svg+xml" href="./assets/brand/plume-mark.svg">
+  <title>Privacy — Plume Image Editor</title>
+  <style>
+    :root{--ink:#1b1b2f;--paper:#faf9f6;--coral:#ff6b57;--blue:#7fb7ff;--muted:#5f6070;color-scheme:light;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.65}a{color:inherit}a:hover{text-decoration-thickness:2px}.wrap{width:min(880px,calc(100% - 40px));margin:auto}.site-head{border-bottom:2px solid var(--ink)}nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:24px;font-weight:750}.brand img{width:30px;height:30px}.nav-actions{display:flex;align-items:center;gap:24px;font-weight:600}.button{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 20px;border-radius:999px;text-decoration:none}.hero{padding:72px 0 44px}.eyebrow{margin:0 0 10px;font-size:14px;font-weight:750;letter-spacing:.09em;text-transform:uppercase}.hero h1{margin:0;font-size:clamp(42px,8vw,68px);line-height:1.04;letter-spacing:-.035em}.lede{max-width:700px;margin:24px 0 0;font-size:21px}.updated{color:var(--muted);font-size:15px}.summary{margin:8px 0 52px;padding:24px 26px;background:white;border:2px solid var(--ink);border-radius:18px;box-shadow:7px 7px 0 var(--blue)}main h2{margin:52px 0 10px;font-size:28px;line-height:1.2}main h3{margin:30px 0 6px;font-size:20px}main p,main ul{margin-top:8px}main li+li{margin-top:7px}.callout{margin:46px 0;padding:24px 26px;border-left:5px solid var(--coral);background:#fff}.legal-nav{display:flex;flex-wrap:wrap;gap:14px;margin:54px 0 72px}.legal-nav a{padding:11px 17px;border:2px solid var(--ink);border-radius:999px;text-decoration:none;font-weight:650}.site-foot{border-top:2px solid var(--ink);padding:28px 0 38px}.foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}.foot-links{display:flex;flex-wrap:wrap;gap:20px}@media(max-width:600px){.nav-actions>a:not(.button){display:none}.hero{padding-top:54px}.summary{box-shadow:5px 5px 0 var(--blue)}}
+  </style>
+</head>
+<body>
+  <header class="site-head">
+    <nav class="wrap" aria-label="Primary navigation">
+      <a class="brand" href="./"><img src="./assets/brand/plume-mark.svg" alt="">Plume</a>
+      <div class="nav-actions"><a href="./terms.html">Terms</a><a class="button" href="./editor/">Start editing</a></div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <header class="hero">
+      <p class="eyebrow">Plain-language privacy</p>
+      <h1>Your images stay yours.</h1>
+      <p class="lede">Plume is designed to edit images inside your browser without sending the files you open to a Plume server.</p>
+      <p class="updated">Last updated: November 7, 2026</p>
+    </header>
+
+    <section class="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title" style="margin-top:0">The short version</h2>
+      <ul>
+        <li>Images and project files you open are processed locally in your browser.</li>
+        <li>Local autosaves are stored in that browser on that device.</li>
+        <li>Plume currently uses no product analytics, advertising trackers, or user accounts.</li>
+        <li>Cloudflare may process ordinary request and security logs when it delivers the website.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Local image processing</h2>
+      <p>When you open an image, PSD, PSB, or Plume <code>.studio</code> project, the editor reads and processes it using browser APIs on your device. Plume does not upload the contents of those files to a Plume application server. Exporting an image or project creates a file locally for you to save.</p>
+      <p>Your device and browser provide the memory and processing power. Very large documents may fail if the browser runs out of memory or storage.</p>
+
+      <h2>Local autosave</h2>
+      <p>Plume can keep a recovery copy of your current editing session in the browser's IndexedDB storage. A recovery copy may include the project name, canvas dimensions, layers, pixel data, masks, and editing settings. It remains associated with the browser profile and device where it was created.</p>
+      <p>Local autosave is not cloud backup. It may be removed when you clear site data, use private-browsing cleanup, reset the browser, or reach a browser storage limit. Save important work as a <code>.studio</code> project and keep your own backups.</p>
+      <p>You can remove Plume's local autosave by clearing stored site data for <strong>plume.build</strong> in your browser settings.</p>
+
+      <h2>Hosting and security logs</h2>
+      <p>Plume is delivered through Cloudflare. Like most web hosts and security providers, Cloudflare may process request metadata such as IP address, requested URL, timestamp, user agent, network information, and security or performance events. This information is used to deliver and protect the website and is handled under <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare's privacy policy</a> and the site's hosting configuration.</p>
+      <p>Plume has no user-account database and does not use hosting logs to build advertising profiles.</p>
+
+      <h2>Analytics and tracking</h2>
+      <p>Plume currently does not use product analytics, advertising pixels, behavioral tracking, or browser fingerprinting. The site does not place an analytics cookie.</p>
+      <p>If analytics are introduced later, this page will be updated to identify the service, the information collected, and the reason for collecting it before the change applies.</p>
+
+      <h2>External services</h2>
+      <p>Links to external websites—such as Buy Me a Coffee—take you away from Plume. Those services receive information according to their own privacy policies. Plume may receive information that a support platform normally provides to a creator, but Plume does not receive the image files you edit merely because you use the editor.</p>
+
+      <h2>Data access and deletion</h2>
+      <p>Because Plume has no accounts and does not store your editing files on a Plume server, it normally has no personal editing library to retrieve or delete. You control locally stored projects and browser autosaves through your device, downloaded files, and browser settings.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>This notice may change as Plume develops. Material changes will be posted here with a revised “Last updated” date.</p>
+    </section>
+
+    <aside class="callout"><strong>Privacy reminder:</strong> keeping files local reduces server exposure, but it does not replace good device security or backups.</aside>
+    <nav class="legal-nav" aria-label="Related pages"><a href="./">Return home</a><a href="./terms.html">Read the terms</a><a href="./editor/">Open the editor</a></nav>
+  </main>
+
+  <footer class="site-foot"><div class="wrap foot-row"><strong>Plume</strong><span class="foot-links"><a href="./privacy.html" aria-current="page">Privacy</a><a href="./terms.html">Terms</a><a href="https://buymeacoffee.com/plume.build" target="_blank" rel="noopener noreferrer">Support Plume</a></span><span>© 2026 Plume</span></div></footer>
+</body>
+</html>
