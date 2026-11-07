@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <meta name="description" content="Report a Plume bug, request a feature, or ask for help.">
+  <link rel="canonical" href="https://plume.build/report.html">
+  <link rel="icon" type="image/svg+xml" href="./assets/brand/plume-mark.svg">
+  <title>Report a Problem — Plume Image Editor</title>
+  <style>
+    :root{--ink:#1b1b2f;--paper:#faf9f6;--coral:#ff6b57;--blue:#7fb7ff;--line:#d8d6d1;--muted:#666775;color-scheme:light;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55}a{color:inherit}.wrap{width:min(1040px,calc(100% - 40px));margin:auto}.site-head{border-bottom:2px solid var(--ink)}nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:24px;font-weight:750}.brand img{width:30px;height:30px}.nav-actions{display:flex;align-items:center;gap:24px;font-weight:600}.button,.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 20px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}.button,.primary{border:2px solid var(--ink);background:var(--ink);color:var(--paper)}.secondary{border:2px solid var(--ink);background:transparent;color:var(--ink)}.hero{padding:64px 0 34px}.eyebrow{margin:0 0 10px;font-size:14px;font-weight:750;letter-spacing:.09em;text-transform:uppercase}.hero h1{margin:0;font-size:clamp(40px,7vw,64px);line-height:1.04;letter-spacing:-.035em}.lede{max-width:720px;margin:20px 0 0;font-size:20px}.layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:32px;align-items:start;padding-bottom:72px}.card{background:#fff;border:2px solid var(--ink);border-radius:20px;padding:28px;box-shadow:7px 7px 0 var(--blue)}.field{display:grid;gap:7px;margin-bottom:20px}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}label{font-weight:700}small,.hint{color:var(--muted)}input,select,textarea{width:100%;border:1px solid #a9a8ae;border-radius:9px;background:#fff;color:var(--ink);font:inherit;padding:11px 12px}textarea{min-height:110px;resize:vertical}input:focus,select:focus,textarea:focus{outline:3px solid #7fb7ff88;border-color:var(--ink)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.notice{margin:0 0 24px;padding:16px 18px;background:#fff5e0;border-left:5px solid #f2b84b}.preview{white-space:pre-wrap;overflow-wrap:anywhere;min-height:280px;margin:0;padding:18px;background:#f4f3f0;border:1px solid var(--line);border-radius:10px;font:14px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}.preview-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.preview-actions[hidden]{display:none}.status{min-height:26px;margin:12px 0 0;font-weight:650;color:#315f43}.site-foot{border-top:2px solid var(--ink);padding:28px 0 38px}.foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}.foot-links{display:flex;flex-wrap:wrap;gap:20px}@media(max-width:800px){.layout{grid-template-columns:1fr}.card{box-shadow:5px 5px 0 var(--blue)}}@media(max-width:600px){.nav-actions>a:not(.button){display:none}.field-row{grid-template-columns:1fr}.hero{padding-top:50px}.card{padding:22px}}
+  </style>
+</head>
+<body>
+  <header class="site-head"><nav class="wrap" aria-label="Primary navigation"><a class="brand" href="./"><img src="./assets/brand/plume-mark.svg" alt="">Plume</a><div class="nav-actions"><a href="./privacy.html">Privacy</a><a class="button" href="./editor/">Start editing</a></div></nav></header>
+
+  <main class="wrap">
+    <header class="hero"><p class="eyebrow">Help improve Plume</p><h1>Report a problem.</h1><p class="lede">Report a bug, request a feature, or ask for help. Your report is prepared on this page, and nothing is sent until you choose to continue to GitHub.</p></header>
+
+    <p class="notice"><strong>Protect your privacy:</strong> reports on GitHub may be public. Do not include private images, confidential text, personal information, or sensitive filenames. Plume never attaches your image or project file.</p>
+
+    <div class="layout">
+      <form class="card" id="reportForm">
+        <div class="field-row">
+          <div class="field"><label for="reportType">What do you need?</label><select id="reportType" required><option value="Bug">Report a bug</option><option value="Feature">Request a feature</option><option value="Help">Ask for help</option></select></div>
+          <div class="field"><label for="fileType">File type involved</label><input id="fileType" maxlength="100" placeholder="Example: PSD, PNG, WebP or none"><small>Use a file type, not a private filename.</small></div>
+        </div>
+
+        <div class="field"><label for="summary">Short summary</label><input id="summary" maxlength="140" required placeholder="What should we know?"></div>
+        <div class="field"><label for="details">Details</label><textarea id="details" maxlength="4000" required placeholder="Describe the problem, feature idea, or help you need."></textarea></div>
+        <div class="field"><label for="steps">Steps to reproduce or workflow</label><textarea id="steps" maxlength="2500" placeholder="1. Opened…&#10;2. Selected…&#10;3. Then…"></textarea></div>
+
+        <div class="field-row">
+          <div class="field"><label for="expected">What did you expect?</label><textarea id="expected" maxlength="1500" placeholder="Expected result"></textarea></div>
+          <div class="field"><label for="actual">What happened instead?</label><textarea id="actual" maxlength="1500" placeholder="Actual result or error message"></textarea></div>
+        </div>
+
+        <div class="field"><label for="browserDetails">Browser and device details</label><textarea id="browserDetails" maxlength="1500"></textarea><small>Filled locally from your browser. Remove anything you do not want included.</small></div>
+        <div class="actions"><button class="primary" type="submit">Prepare report</button><button class="secondary" type="reset">Clear form</button></div>
+      </form>
+
+      <aside class="card" aria-labelledby="previewTitle"><h2 id="previewTitle" style="margin-top:0">Report preview</h2><p class="hint">Review this text before opening GitHub.</p><pre class="preview" id="reportPreview">Complete the form and select “Prepare report.”</pre><div class="preview-actions" id="previewActions" hidden><a class="primary" id="githubIssueLink" href="https://github.com/phillippplangetis/studio-/issues/new" target="_blank" rel="noopener noreferrer">Continue to GitHub</a><button class="secondary" id="copyReport" type="button">Copy report</button></div><p class="status" id="reportStatus" role="status" aria-live="polite"></p><p class="hint">A GitHub account is required to publish an issue. If you do not have one, copy the report and keep it for later.</p></aside>
+    </div>
+  </main>
+
+  <footer class="site-foot"><div class="wrap foot-row"><strong>Plume</strong><span class="foot-links"><a href="./report.html" aria-current="page">Report a problem</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="https://buymeacoffee.com/plume.build" target="_blank" rel="noopener noreferrer">Support Plume</a></span><span>© 2026 Plume</span></div></footer>
+  <script src="./src/report.js" defer></script>
+</body>
+</html>
